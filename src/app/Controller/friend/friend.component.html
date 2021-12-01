@@ -1,0 +1,48 @@
+<div class="container">
+  <h3 class="head">Best Friends List</h3>
+  Enter Friend Id<input type=text name=friendId [(ngModel)]=theFriend.friendId><br>
+
+Enter Friend Name<input type=text name=friendName [(ngModel)]=theFriend.friendName><br>
+Enter Friend Email<input type=text name=friendEmail [(ngModel)]=theFriend.friendEmail><br>
+Enter Friend Phone<input type=text name=friendPhone [(ngModel)]=theFriend.friendPhone><br>
+
+<button (click)="addFriend()">Add Friend</button> //functionality of the type script VS onclick
+
+
+<hr>
+Enter Friend ID<input type=number name=friendId [(ngModel)]=theFriend.friendId ><br>
+Enter Friend Name<input type=text name=friendName [(ngModel)]=theFriend.friendName><br>
+Enter Friend Email<input type=text name=friendEmail [(ngModel)]=theFriend.friendEmail><br>
+Enter Friend Phone<input type=text name=friendPhone [(ngModel)]=theFriend.friendPhone><br>
+<button (click)="updateFriend()">Update Friend</button>
+
+
+<hr>
+Enter Friend ID<input type=number name=friendId [(ngModel)]=theFriend.friendId ><br>
+<button (click)="deleteFriend()">Delete Friend</button>
+
+
+<hr>
+  <button class="buttonClick btn-primary" (click)="showAllFriends()">
+    Show All Friends
+  </button>
+
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let theFriend of allFriends">
+        <td>{{ theFriend.friendId }}</td>
+        <td>{{ theFriend.friendName }}</td>
+        <td>{{ theFriend.friendEmail }}</td>
+        <td>{{ theFriend.friendPhone }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

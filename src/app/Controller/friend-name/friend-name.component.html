@@ -1,0 +1,35 @@
+<div class="container">
+  <h3 class="head">Best Friends List</h3>
+
+  <hr />
+  <button class="buttonClick btn-primary" (click)="showAllFriends()">
+    Show All Friends
+  </button>
+
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let theFriend of allFriends">
+        <td>{{ theFriend }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr />
+  <button class="buttonClick btn-primary" (click)="showFriend()">
+    Show Friend
+  </button>
+
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
